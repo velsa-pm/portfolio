@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velsa's Portfolio</title>
+    
+    <link rel="icon" type="image/svg+xml" href="assets/brand-mark.svg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          // TODO: Replace with your actual Public Key from EmailJS Dashboard
+          emailjs.init("P7wJFH7iBmguuH7mG");
+       })();
+    </script>
+</head>
+<body>
+
+    <div id="profile-screen">
+        <img src="assets/logo.svg" alt="Velsa Logo" class="brand-logo-img">
+        <h1>Who's watching?</h1>
+        <div class="profile-row">
+            <div class="profile" data-content="resume" tabindex="0" role="button">
+                <div class="avatar-box color-blue">
+                    <div class="face-container"><div class="eye left"></div><div class="eye right"></div><div class="mouth"></div></div>
+                </div>
+                <span>Resume</span>
+            </div>
+            <div class="profile" data-content="projects" tabindex="0" role="button">
+                <div class="avatar-box color-pink">
+                    <div class="face-container"><div class="eye left"></div><div class="eye right"></div><div class="mouth"></div></div>
+                </div>
+                <span>Projects</span>
+            </div>
+            <div class="profile" data-content="blog" tabindex="0" role="button">
+                <div class="avatar-box color-yellow">
+                    <div class="face-container"><div class="eye left"></div><div class="eye right"></div><div class="mouth"></div></div>
+                </div>
+                <span>Blog</span>
+            </div>
+            <div class="profile" data-content="playground" tabindex="0" role="button">
+                <div class="avatar-box color-red">
+                    <div class="face-container"><div class="eye left"></div><div class="eye right"></div><div class="mouth"></div></div>
+                </div>
+                <span>Playground</span>
+            </div>
+        </div> 
+    </div>
+
+    <div id="content-screen" class="hidden">
+        <nav>
+            <img src="assets/brand-mark.svg" alt="Velsa Brand Mark" class="nav-brand-img">
+            <button id="back-btn">⬅ Go Back</button>
+        </nav>
+        <div id="dynamic-content"></div>
+    </div>
+
+    <div id="email-modal" class="hidden">
+        <div class="modal-content">
+            <span id="close-icon-btn" class="close-modal-btn">&times;</span>
+            <h2>Want the full version?</h2>
+            <p>Enter your email and I'll send you my complete resume immediately.</p>
+            
+            <input type="email" id="recruiter-email" placeholder="recruiter@company.com">
+            
+            <div class="modal-actions">
+                <button id="submit-email">Send it to me</button>
+                <button id="skip-email" class="secondary-btn">No thanks, just view onscreen</button>
+            </div>
+        </div>
+    </div>
+       
+    <script src="script.js"></script>
+</body>
+</html>
