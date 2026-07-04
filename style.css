@@ -1,4 +1,5 @@
 /* --- GLOBAL STYLES --- */
+html { cursor: default; }
 body {
     background-color: #141414;
     background-image: radial-gradient(circle at 30% 20%, rgba(40,40,40,1) 0%, rgba(20,20,20,1) 40%, #141414 100%);
@@ -9,9 +10,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; 
-    overflow-x: hidden; 
-    transition: background 0.4s ease; 
+    justify-content: flex-start;
+    overflow-x: hidden;
+    transition: background 0.4s ease;
+    cursor: default;
 }
 
 /* --- ASSETS & ANIMATIONS --- */
@@ -19,12 +21,13 @@ body {
     position: absolute; top: 40px; left: 60px; height: 55px; width: auto; z-index: 10;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5)); opacity: 0;
     animation: cinematicPop 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    user-select: none; pointer-events: none;
+    user-select: none; pointer-events: none; display: block; overflow: visible; cursor: default;
 }
 
 .nav-brand-img {
     height: 45px; width: auto; cursor: pointer; opacity: 0;
     animation: slideDown 0.5s ease 0.2s forwards;
+    user-select: none; display: block; overflow: visible;
 }
 
 /* --- PROFILE SCREEN --- */
